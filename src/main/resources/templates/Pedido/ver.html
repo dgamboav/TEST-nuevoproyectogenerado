@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title><th:text="Pedido"></title>
+</head>
+<body>
+    <h1><th:text="Pedido"></h1>
+            <label for="id">id:</label>
+            <input type="text" name="id" id="id" /><br />
+            <label for="clienteId">clienteId:</label>
+            <input type="text" name="clienteId" id="clienteId" /><br />
+            <label for="fechaPedido">fechaPedido:</label>
+            <input type="text" name="fechaPedido" id="fechaPedido" /><br />
+            <label for="total">total:</label>
+            <input type="text" name="total" id="total" /><br />
+    <a th:href="pedido/lista">Volver a la lista</a>
+</body>
+</html>

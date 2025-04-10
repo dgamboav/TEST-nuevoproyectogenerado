@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de <th:block th:text="Pedido + 's'"></th:block></title>
+</head>
+<body>
+    <h1>Lista de <th:block th:text="Pedido + 's'"></th:block></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                    <th><th:block th:text="id"></th:block></th>
+                    <th><th:block th:text="clienteId"></th:block></th>
+                    <th><th:block th:text="fechaPedido"></th:block></th>
+                    <th><th:block th:text="total"></th:block></th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="pedido : pedidos">
+                <td><th:block th:text="pedido.id"></th:block></td>
+                    <td><th:block th:text="pedido[atributo.nombre]"></th:block></td>
+                    <td><th:block th:text="pedido[atributo.nombre]"></th:block></td>
+                    <td><th:block th:text="pedido[atributo.nombre]"></th:block></td>
+                    <td><th:block th:text="pedido[atributo.nombre]"></th:block></td>
+                <td>
+                    <a th:href="@{/pedido/{id}(id=pedido.id)}">Ver</a>
+                    <a th:href="@{/pedido/editar/{id}(id=pedido.id)}">Editar</a>
+                    <a th:href="@{/pedido/eliminar/{id}(id=pedido.id)}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody >
+    </table>
+    <a th:href="@{/pedido/crear}">Crear nuevo <th:block th:text="Pedido"></th:block></a>
+</body>
+</html>

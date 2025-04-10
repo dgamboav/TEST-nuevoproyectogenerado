@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar <th:block th:text="Pedido"></th:block></title>
+</head>
+<body>
+    <h1>Editar <th:block th:text="Pedido"></th:block></h1>
+    <form th:action="@{/pedido/editar/{id}(id=pedido.id)}" th:object="pedido" method="post">
+        <input type="hidden" th:field="*{id}" />
+            <label th:for="id" th:text="id + ':'"></label>
+            <input type="text" th:field="*{__id__}" th:id="id" /><br />
+            <label th:for="clienteId" th:text="clienteId + ':'"></label>
+            <input type="text" th:field="*{__clienteId__}" th:id="clienteId" /><br />
+            <label th:for="fechaPedido" th:text="fechaPedido + ':'"></label>
+            <input type="text" th:field="*{__fechaPedido__}" th:id="fechaPedido" /><br />
+            <label th:for="total" th:text="total + ':'"></label>
+            <input type="text" th:field="*{__total__}" th:id="total" /><br />
+        <input type="submit" value="Guardar" />
+    </form>
+    <a th:href="@{/pedido}">Volver a la lista</a>
+</body>
+</html>

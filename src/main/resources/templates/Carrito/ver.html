@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title><th:text="Carrito"></title>
+</head>
+<body>
+    <h1><th:text="Carrito"></h1>
+            <label for="id">id:</label>
+            <input type="text" name="id" id="id" /><br />
+            <label for="clienteId">clienteId:</label>
+            <input type="text" name="clienteId" id="clienteId" /><br />
+            <label for="fechaCreacion">fechaCreacion:</label>
+            <input type="text" name="fechaCreacion" id="fechaCreacion" /><br />
+    <a th:href="carrito/lista">Volver a la lista</a>
+</body>
+</html>

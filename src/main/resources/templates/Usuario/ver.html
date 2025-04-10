@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title><th:text="Usuario"></title>
+</head>
+<body>
+    <h1><th:text="Usuario"></h1>
+            <label for="id">id:</label>
+            <input type="text" name="id" id="id" /><br />
+            <label for="nombre">nombre:</label>
+            <input type="text" name="nombre" id="nombre" /><br />
+            <label for="correo">correo:</label>
+            <input type="text" name="correo" id="correo" /><br />
+            <label for="contrasena">contrasena:</label>
+            <input type="text" name="contrasena" id="contrasena" /><br />
+    <a th:href="usuario/lista">Volver a la lista</a>
+</body>
+</html>

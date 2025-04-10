@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title><th:text="Cliente"></title>
+</head>
+<body>
+    <h1><th:text="Cliente"></h1>
+            <label for="id">id:</label>
+            <input type="text" name="id" id="id" /><br />
+            <label for="nombre">nombre:</label>
+            <input type="text" name="nombre" id="nombre" /><br />
+            <label for="direccion">direccion:</label>
+            <input type="text" name="direccion" id="direccion" /><br />
+            <label for="telefono">telefono:</label>
+            <input type="text" name="telefono" id="telefono" /><br />
+    <a th:href="cliente/lista">Volver a la lista</a>
+</body>
+</html>

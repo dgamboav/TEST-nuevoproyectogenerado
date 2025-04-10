@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de <th:block th:text="Carrito + 's'"></th:block></title>
+</head>
+<body>
+    <h1>Lista de <th:block th:text="Carrito + 's'"></th:block></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                    <th><th:block th:text="id"></th:block></th>
+                    <th><th:block th:text="clienteId"></th:block></th>
+                    <th><th:block th:text="fechaCreacion"></th:block></th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="carrito : carritos">
+                <td><th:block th:text="carrito.id"></th:block></td>
+                    <td><th:block th:text="carrito[atributo.nombre]"></th:block></td>
+                    <td><th:block th:text="carrito[atributo.nombre]"></th:block></td>
+                    <td><th:block th:text="carrito[atributo.nombre]"></th:block></td>
+                <td>
+                    <a th:href="@{/carrito/{id}(id=carrito.id)}">Ver</a>
+                    <a th:href="@{/carrito/editar/{id}(id=carrito.id)}">Editar</a>
+                    <a th:href="@{/carrito/eliminar/{id}(id=carrito.id)}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody >
+    </table>
+    <a th:href="@{/carrito/crear}">Crear nuevo <th:block th:text="Carrito"></th:block></a>
+</body>
+</html>

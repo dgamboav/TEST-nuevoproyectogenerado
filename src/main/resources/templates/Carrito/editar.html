@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar <th:block th:text="Carrito"></th:block></title>
+</head>
+<body>
+    <h1>Editar <th:block th:text="Carrito"></th:block></h1>
+    <form th:action="@{/carrito/editar/{id}(id=carrito.id)}" th:object="carrito" method="post">
+        <input type="hidden" th:field="*{id}" />
+            <label th:for="id" th:text="id + ':'"></label>
+            <input type="text" th:field="*{__id__}" th:id="id" /><br />
+            <label th:for="clienteId" th:text="clienteId + ':'"></label>
+            <input type="text" th:field="*{__clienteId__}" th:id="clienteId" /><br />
+            <label th:for="fechaCreacion" th:text="fechaCreacion + ':'"></label>
+            <input type="text" th:field="*{__fechaCreacion__}" th:id="fechaCreacion" /><br />
+        <input type="submit" value="Guardar" />
+    </form>
+    <a th:href="@{/carrito}">Volver a la lista</a>
+</body>
+</html>
